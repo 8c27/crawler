@@ -3,7 +3,7 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 
-def eo():
+def big_eight_price():
     url = 'https://chart.capital.com.tw/Chart/TWII/TAIEX11.aspx'
     re = requests.get(url)
     soup = BeautifulSoup(re.text, 'lxml')  # 使用lxml解析
@@ -20,4 +20,5 @@ def eo():
 
     df = pd.DataFrame(data, columns=['日期', '買賣超金額', '台指期'])
     df.to_csv('八大官股買賣超.csv')
-    #print(data)
+    print(data)
+    df.to_csv()

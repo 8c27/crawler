@@ -1,4 +1,4 @@
-from crawler_.eight_offcial.catch_data import eo
+from crawler_.crawler_lib.big_eight import big_eight_price
 
 demo = '功能表\ 0)離開\ 1)下載八大官股買賣超'
 
@@ -7,4 +7,4 @@ while True:
     if option == '0':
         exit()
     elif option == '1':
-        print(eo())
+        print(big_eight_price())
